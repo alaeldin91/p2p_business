@@ -3,10 +3,10 @@
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        P2PBusiness service = new P2PBusiness();
-        Thread t1 = new Thread(() -> service.transfer("tx-1001", "Alaeldin", "Ahamed", 100));
-        Thread t2 = new Thread(() -> service.transfer("tx-1001", "Alaeldin", "Ahamed", 100)); // نفس ID → لن ينفذ
-        Thread t3 = new Thread(() -> service.transfer("tx-1002", "Mohamed", "sara", 50));
+        Exceris1P2PBusiness service = new Exceris1P2PBusiness();
+        Thread t1 = new Thread(() -> service.transfer("tx-1001", "Omer", "Sara", 100));
+        Thread t2 = new Thread(() -> service.transfer("tx-1001", "Omer", "Sara", 100)); // نفس ID → لن ينفذ
+        Thread t3 = new Thread(() -> service.transfer("tx-1002", "sara", "Lina", 50));
 
         t1.start();
         t2.start();
